@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RowUI | Premium Design & Tech Blog</title>
+    <!-- Updated Tailwind Script to include Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+                950: '#082f49',
+              }
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  maxWidth: 'none',
+                  color: theme('colors.slate.600'),
+                  a: {
+                    color: theme('colors.primary.600'),
+                    textDecoration: 'none',
+                    '&:hover': {
+                      color: theme('colors.primary.500'),
+                    },
+                  },
+                  h1: {
+                    color: theme('colors.slate.900'),
+                  },
+                  h2: {
+                    color: theme('colors.slate.900'),
+                  },
+                  h3: {
+                    color: theme('colors.slate.900'),
+                  },
+                  strong: {
+                    color: theme('colors.slate.900'),
+                    fontWeight: '700',
+                  },
+                  code: {
+                    color: theme('colors.primary.600'),
+                    backgroundColor: theme('colors.primary.50'),
+                    paddingLeft: '4px',
+                    paddingRight: '4px',
+                    paddingTop: '2px',
+                    paddingBottom: '2px',
+                    borderRadius: '0.25rem',
+                  },
+                  'code::before': {
+                    content: '""',
+                  },
+                  'code::after': {
+                    content: '""',
+                  },
+                },
+              },
+              invert: {
+                css: {
+                  color: theme('colors.slate.300'),
+                  a: {
+                    color: theme('colors.primary.400'),
+                    '&:hover': {
+                      color: theme('colors.primary.300'),
+                    },
+                  },
+                  h1: {
+                    color: theme('colors.white'),
+                  },
+                  h2: {
+                    color: theme('colors.white'),
+                  },
+                  h3: {
+                    color: theme('colors.white'),
+                  },
+                  strong: {
+                    color: theme('colors.white'),
+                  },
+                  code: {
+                    color: theme('colors.primary.400'),
+                    backgroundColor: 'rgba(56, 189, 248, 0.1)',
+                  },
+                },
+              },
+            }),
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .dark .glass-panel {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.86.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
+    "react-hot-toast": "https://aistudiocdn.com/react-hot-toast@^2.6.0",
+    "@tinymce/tinymce-react": "https://aistudiocdn.com/@tinymce/tinymce-react@^6.3.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
